@@ -97,7 +97,7 @@ func (networkInterfaces NetworkInterfaces) validate(kernelArgs kernelArgs) error
 }
 
 // setupNetwork will invoke CNI if needed for any interfaces
-func (networkInterfaces NetworkInterfaces) setupNetwork(
+func (networkInterfaces NetworkInterfaces) SetupNetwork(
 	ctx context.Context,
 	vmID string,
 	netNSPath string,

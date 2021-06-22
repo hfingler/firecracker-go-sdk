@@ -434,7 +434,7 @@ func (m *Machine) Wait(ctx context.Context) error {
 }
 
 func (m *Machine) setupNetwork(ctx context.Context) error {
-	err, cleanupFuncs := m.Cfg.NetworkInterfaces.setupNetwork(ctx, m.Cfg.VMID, m.Cfg.NetNS, m.logger)
+	err, cleanupFuncs := m.Cfg.NetworkInterfaces.SetupNetwork(ctx, m.Cfg.VMID, m.Cfg.NetNS, m.logger)
 	m.cleanupFuncs = append(m.cleanupFuncs, cleanupFuncs...)
 	return err
 }
